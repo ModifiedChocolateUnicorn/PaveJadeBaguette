@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>Locking system</th>
+      <th>Brand</th>
+      <th>Size</th>
+      <th>Anodizing</th>
+      <th>User</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bases.each do |basis| %>
+      <tr>
+        <td><%= basis.material %></td>
+        <td><%= basis.locking_system %></td>
+        <td><%= basis.brand %></td>
+        <td><%= basis.size %></td>
+        <td><%= basis.anodizing %></td>
+        <td><%= basis.user %></td>
+        <td><%= basis.quantity %></td>
+        <td><%= link_to 'Show', basis %></td>
+        <td><%= link_to 'Edit', edit_basis_path(basis) %></td>
+        <td><%= link_to 'Destroy', basis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Basis', new_basis_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @basis.material %>
+</p>
+
+<p>
+  <strong>Locking system:</strong>
+  <%= @basis.locking_system %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @basis.brand %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @basis.size %>
+</p>
+
+<p>
+  <strong>Anodizing:</strong>
+  <%= @basis.anodizing %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @basis.user %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @basis.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_basis_path(@basis) %> |
+<%= link_to 'Back', bases_path %>

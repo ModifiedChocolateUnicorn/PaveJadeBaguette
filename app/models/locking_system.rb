@@ -1,0 +1,2 @@
+class LockingSystem < ApplicationRecord
+end

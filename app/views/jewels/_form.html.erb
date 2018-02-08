@@ -1,0 +1,62 @@
+<%= form_with(model: jewel, local: true) do |form| %>
+  <% if jewel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jewel.errors.count, "error") %> prohibited this jewel from being saved:</h2>
+
+      <ul>
+      <% jewel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :design_id %>
+    <%= form.text_field :design_id, id: :jewel_design_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :material_id %>
+    <%= form.text_field :material_id, id: :jewel_material_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :locking_system_id %>
+    <%= form.text_field :locking_system_id, id: :jewel_locking_system_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.text_field :brand_id, id: :jewel_brand_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size_id %>
+    <%= form.text_field :size_id, id: :jewel_size_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anodizing_id %>
+    <%= form.text_field :anodizing_id, id: :jewel_anodizing_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gemstones_ids %>
+    <%= form.text_field :gemstones_ids, id: :jewel_gemstones_ids %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :jewel_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :jewel_quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

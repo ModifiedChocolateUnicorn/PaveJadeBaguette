@@ -1,0 +1,52 @@
+<%= form_with(model: basis, local: true) do |form| %>
+  <% if basis.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(basis.errors.count, "error") %> prohibited this basis from being saved:</h2>
+
+      <ul>
+      <% basis.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :material_id %>
+    <%= form.text_field :material_id, id: :basis_material_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :locking_system_id %>
+    <%= form.text_field :locking_system_id, id: :basis_locking_system_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.text_field :brand_id, id: :basis_brand_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size_id %>
+    <%= form.text_field :size_id, id: :basis_size_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anodizing_id %>
+    <%= form.text_field :anodizing_id, id: :basis_anodizing_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :basis_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity, id: :basis_quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

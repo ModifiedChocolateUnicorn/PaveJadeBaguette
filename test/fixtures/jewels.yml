@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  design: one
+  material: one
+  locking_system: one
+  brand: one
+  size: one
+  anodizing: one
+  gemstones_ids: MyString
+  user: one
+  quantity: 1
+
+two:
+  design: two
+  material: two
+  locking_system: two
+  brand: two
+  size: two
+  anodizing: two
+  gemstones_ids: MyString
+  user: two
+  quantity: 1

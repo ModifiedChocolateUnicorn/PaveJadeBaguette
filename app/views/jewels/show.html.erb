@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Design:</strong>
+  <%= @jewel.design %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @jewel.material %>
+</p>
+
+<p>
+  <strong>Locking system:</strong>
+  <%= @jewel.locking_system %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @jewel.brand %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @jewel.size %>
+</p>
+
+<p>
+  <strong>Anodizing:</strong>
+  <%= @jewel.anodizing %>
+</p>
+
+<p>
+  <strong>Gemstones ids:</strong>
+  <%= @jewel.gemstones_ids %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @jewel.user %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @jewel.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_jewel_path(@jewel) %> |
+<%= link_to 'Back', jewels_path %>

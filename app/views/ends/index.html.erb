@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Design</th>
+      <th>Material</th>
+      <th>Locking system</th>
+      <th>Brand</th>
+      <th>End size</th>
+      <th>Anodizing</th>
+      <th>Gemstones ids</th>
+      <th>User</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ends.each do |end| %>
+      <tr>
+        <td><%= end.design %></td>
+        <td><%= end.material %></td>
+        <td><%= end.locking_system %></td>
+        <td><%= end.brand %></td>
+        <td><%= end.end_size %></td>
+        <td><%= end.anodizing %></td>
+        <td><%= end.gemstones_ids %></td>
+        <td><%= end.user %></td>
+        <td><%= end.quantity %></td>
+        <td><%= link_to 'Show', end %></td>
+        <td><%= link_to 'Edit', edit_end_path(end) %></td>
+        <td><%= link_to 'Destroy', end, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New End', new_end_path %>

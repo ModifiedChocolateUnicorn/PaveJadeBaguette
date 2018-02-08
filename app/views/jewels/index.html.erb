@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jewels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Design</th>
+      <th>Material</th>
+      <th>Locking system</th>
+      <th>Brand</th>
+      <th>Size</th>
+      <th>Anodizing</th>
+      <th>Gemstones ids</th>
+      <th>User</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jewels.each do |jewel| %>
+      <tr>
+        <td><%= jewel.design %></td>
+        <td><%= jewel.material %></td>
+        <td><%= jewel.locking_system %></td>
+        <td><%= jewel.brand %></td>
+        <td><%= jewel.size %></td>
+        <td><%= jewel.anodizing %></td>
+        <td><%= jewel.gemstones_ids %></td>
+        <td><%= jewel.user %></td>
+        <td><%= jewel.quantity %></td>
+        <td><%= link_to 'Show', jewel %></td>
+        <td><%= link_to 'Edit', edit_jewel_path(jewel) %></td>
+        <td><%= link_to 'Destroy', jewel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jewel', new_jewel_path %>
