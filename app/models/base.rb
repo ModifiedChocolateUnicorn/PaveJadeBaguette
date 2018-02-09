@@ -1,4 +1,5 @@
 class Base < ApplicationRecord
+  # relations
   belongs_to :material
   belongs_to :locking_system
   belongs_to :brand

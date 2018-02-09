@@ -1,4 +1,5 @@
 class Jewel < ApplicationRecord
+  # relations
   belongs_to :design
   belongs_to :material
   belongs_to :locking_system

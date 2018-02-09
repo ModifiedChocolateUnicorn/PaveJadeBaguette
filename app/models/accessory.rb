@@ -1,4 +1,5 @@
-class Accessory < ApplicationRecord
+class Accessory < 
+  # relations
   belongs_to :design
   belongs_to :material
   belongs_to :locking_system
