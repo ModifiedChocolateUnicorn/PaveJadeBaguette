@@ -29,10 +29,8 @@ class JewelsController < ApplicationController
     respond_to do |format|
       if @jewel.save
         format.html { redirect_to @jewel, notice: 'Jewel was successfully created.' }
-        format.json { render :show, status: :created, location: @jewel }
       else
         format.html { render :new }
-        format.json { render json: @jewel.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +41,8 @@ class JewelsController < ApplicationController
     respond_to do |format|
       if @jewel.update(jewel_params)
         format.html { redirect_to @jewel, notice: 'Jewel was successfully updated.' }
-        format.json { render :show, status: :ok, location: @jewel }
       else
         format.html { render :edit }
-        format.json { render json: @jewel.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -57,7 +53,6 @@ class JewelsController < ApplicationController
     @jewel.destroy
     respond_to do |format|
       format.html { redirect_to jewels_url, notice: 'Jewel was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

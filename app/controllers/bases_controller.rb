@@ -29,10 +29,8 @@ class BasesController < ApplicationController
     respond_to do |format|
       if @basis.save
         format.html { redirect_to @basis, notice: 'Base was successfully created.' }
-        format.json { render :show, status: :created, location: @basis }
       else
         format.html { render :new }
-        format.json { render json: @basis.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +41,8 @@ class BasesController < ApplicationController
     respond_to do |format|
       if @basis.update(basis_params)
         format.html { redirect_to @basis, notice: 'Base was successfully updated.' }
-        format.json { render :show, status: :ok, location: @basis }
       else
         format.html { render :edit }
-        format.json { render json: @basis.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -57,7 +53,6 @@ class BasesController < ApplicationController
     @basis.destroy
     respond_to do |format|
       format.html { redirect_to bases_url, notice: 'Base was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
