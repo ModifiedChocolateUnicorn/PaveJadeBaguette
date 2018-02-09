@@ -1,0 +1,62 @@
+<%= form_with(model: accessory, local: true) do |form| %>
+  <% if accessory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(accessory.errors.count, "error") %> prohibited this accessory from being saved:</h2>
+
+      <ul>
+      <% accessory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :design_id %>
+    <%= form.text_field :design_id, id: :accessory_design_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :material_id %>
+    <%= form.text_field :material_id, id: :accessory_material_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :locking_system_id %>
+    <%= form.text_field :locking_system_id, id: :accessory_locking_system_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.text_field :brand_id, id: :accessory_brand_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accessory_size %>
+    <%= form.text_field :accessory_size, id: :accessory_accessory_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anodizing_id %>
+    <%= form.text_field :anodizing_id, id: :accessory_anodizing_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gemstones_ids %>
+    <%= form.text_field :gemstones_ids, id: :accessory_gemstones_ids %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :accessory_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :accessory_quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

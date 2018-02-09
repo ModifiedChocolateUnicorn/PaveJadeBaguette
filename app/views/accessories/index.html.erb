@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accessories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Design</th>
+      <th>Material</th>
+      <th>Locking system</th>
+      <th>Brand</th>
+      <th>Accessory size</th>
+      <th>Anodizing</th>
+      <th>Gemstones ids</th>
+      <th>User</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accessories.each do |accessory| %>
+      <tr>
+        <td><%= accessory.design %></td>
+        <td><%= accessory.material %></td>
+        <td><%= accessory.locking_system %></td>
+        <td><%= accessory.brand %></td>
+        <td><%= accessory.accessory_size %></td>
+        <td><%= accessory.anodizing %></td>
+        <td><%= accessory.gemstones_ids %></td>
+        <td><%= accessory.user %></td>
+        <td><%= accessory.quantity %></td>
+        <td><%= link_to 'Show', accessory %></td>
+        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
+        <td><%= link_to 'Destroy', accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accessory', new_accessory_path %>

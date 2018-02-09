@@ -1,4 +1,4 @@
-class End < ApplicationRecord
+class Accessory < ApplicationRecord
   belongs_to :design
   belongs_to :material
   belongs_to :locking_system
