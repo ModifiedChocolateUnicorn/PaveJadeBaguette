@@ -56,6 +56,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def login
+  end
+
+  # this action checks wether the information provided when logging in does match with something in the database
+  def login_check
+    @current_user = User.where(name: params[:name], pwd: params[:pwd]).first
+    if @current_user
+      session[:user_id] = @current_user.id
+      redirect_to "/users/#{session[:user_id]}"
+    else
+      flash[:notice] = "Nope, not the good combo !"
+      redirect_to "/users/login"
+    end
+  end
+
+  def logout
+    session[:user_id] = nil
+      redirect_to "/users"
+end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
