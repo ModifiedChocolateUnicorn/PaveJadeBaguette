@@ -10,7 +10,14 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if session[:user_id] != nil && session[:user_id] == @user.id
+    elsif session[:user_id] == nil || @current_user.role != 'admin'
+      flash[:notice] = "You've got to connect first to see your profile ;) !"
+      redirect_to users_url
+    else
+    end
   end
+
 
   # GET /users/new
   def new
@@ -19,6 +26,12 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if session[:user_id] != nil && session[:user_id] == @user.id
+    elsif session[:user_id] == nil || @current_user.role != 'admin'
+      flash[:notice] = "You've got to connect first to edit your profile !"
+      redirect_to users_url
+    else
+    end
   end
 
   # POST /users
@@ -33,7 +46,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to users_url, notice: 'User was successfully created.' }
       else
         format.html { render :new }
       end
@@ -71,7 +84,7 @@ class UsersController < ApplicationController
       session[:user_id] = @current_user.id
       redirect_to "/users/#{session[:user_id]}"
     else
-      flash[:notice] = "Nope, not the good combo !"
+      flash[:invalid_login] = "Nope, not the good combo !"
       redirect_to "/users/login"
     end
   end
