@@ -24,7 +24,12 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    # checking if role is empty or not
+    if user_params[:role] == '' || user_params[:role] == nil
+      @user = User.new(user_params.merge!(role: 'user'))
+    else
     @user = User.new(user_params)
+    end 
 
     respond_to do |format|
       if @user.save
