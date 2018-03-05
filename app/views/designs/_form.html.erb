@@ -1,0 +1,37 @@
+<%= form_with(model: design, local: true) do |form| %>
+  <% if design.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(design.errors.count, "error") %> prohibited this design from being saved:</h2>
+
+      <ul>
+      <% design.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :design_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.select("brand_id", @brands.collect {|b| [ b.name, b.id ] }, { include_blank: false}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :core_number %>
+    <%= form.number_field(:core_number, {in: 0..1})%>
+  </div>
+
+  <div class="field">
+    <%= form.label :accent_number %>
+    <%= form.number_field(:accent_number, {in: 0..50 }) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

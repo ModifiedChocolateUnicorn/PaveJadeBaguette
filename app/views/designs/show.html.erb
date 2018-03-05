@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @design.name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @design.brand.name %>
+</p>
+
+<p>
+  <strong>Core Number:</strong>
+  <%= @design.core_number %> core
+</p>
+
+<p>
+  <strong>Accent Number:</strong>
+  <%= @design.accent_number %> core
+</p>
+
+<% if session[:user_id] != nil && @current_user.role == 'admin' %>
+  <%= link_to 'Edit', edit_design_path(@design) %> |
+  <%= link_to 'Back', designs_path %>
+<% end %>
