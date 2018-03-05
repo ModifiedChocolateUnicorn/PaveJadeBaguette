@@ -42,7 +42,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params.merge!(role: 'user'))
     else
     @user = User.new(user_params)
-    end 
+    end
 
     respond_to do |format|
       if @user.save
@@ -68,9 +68,12 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+    if session[:user_id] != nil && session[:user_id] = @user.id || @current_user.role == 'admin'
+      @user.destroy
+      respond_to do |format|
+        format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      end
+    else
     end
   end
 
