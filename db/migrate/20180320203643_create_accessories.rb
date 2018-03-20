@@ -5,7 +5,7 @@ class CreateAccessories < ActiveRecord::Migration[5.1]
       t.references :material, foreign_key: true
       t.references :locking_system, foreign_key: true
       t.references :brand, foreign_key: true
-      t.string :accessory_size
+      t.references :size, foreign_key: true
       t.references :anodizing, foreign_key: true
       t.string :gemstones_ids
       t.references :user, foreign_key: true

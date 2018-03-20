@@ -17,7 +17,7 @@ class AccessoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create accessory" do
     assert_difference('Accessory.count') do
-      post accessories_url, params: { accessory: { accessory_size: @accessory.accessory_size, anodizing_id: @accessory.anodizing_id, brand_id: @accessory.brand_id, design_id: @accessory.design_id, gemstones_ids: @accessory.gemstones_ids, locking_system_id: @accessory.locking_system_id, material_id: @accessory.material_id, quantity: @accessory.quantity, user_id: @accessory.user_id } }
+      post accessories_url, params: { accessory: { anodizing_id: @accessory.anodizing_id, brand_id: @accessory.brand_id, design_id: @accessory.design_id, gemstones_ids: @accessory.gemstones_ids, locking_system_id: @accessory.locking_system_id, material_id: @accessory.material_id, quantity: @accessory.quantity, size_id: @accessory.size_id, user_id: @accessory.user_id } }
     end
 
     assert_redirected_to accessory_url(Accessory.last)
@@ -34,7 +34,7 @@ class AccessoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update accessory" do
-    patch accessory_url(@accessory), params: { accessory: { accessory_size: @accessory.accessory_size, anodizing_id: @accessory.anodizing_id, brand_id: @accessory.brand_id, design_id: @accessory.design_id, gemstones_ids: @accessory.gemstones_ids, locking_system_id: @accessory.locking_system_id, material_id: @accessory.material_id, quantity: @accessory.quantity, user_id: @accessory.user_id } }
+    patch accessory_url(@accessory), params: { accessory: { anodizing_id: @accessory.anodizing_id, brand_id: @accessory.brand_id, design_id: @accessory.design_id, gemstones_ids: @accessory.gemstones_ids, locking_system_id: @accessory.locking_system_id, material_id: @accessory.material_id, quantity: @accessory.quantity, size_id: @accessory.size_id, user_id: @accessory.user_id } }
     assert_redirected_to accessory_url(@accessory)
   end
 

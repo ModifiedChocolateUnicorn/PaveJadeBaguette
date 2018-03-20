@@ -5,7 +5,7 @@ one:
   material: one
   locking_system: one
   brand: one
-  accessory_size: MyString
+  size: one
   anodizing: one
   gemstones_ids: MyString
   user: one
@@ -16,7 +16,7 @@ two:
   material: two
   locking_system: two
   brand: two
-  accessory_size: MyString
+  size: two
   anodizing: two
   gemstones_ids: MyString
   user: two

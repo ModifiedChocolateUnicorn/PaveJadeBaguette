@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209184502) do
+ActiveRecord::Schema.define(version: 20180320203643) do
 
   create_table "accessories", force: :cascade do |t|
     t.integer "design_id"
     t.integer "material_id"
     t.integer "locking_system_id"
     t.integer "brand_id"
-    t.string "accessory_size"
+    t.integer "size_id"
     t.integer "anodizing_id"
     t.string "gemstones_ids"
     t.integer "user_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180209184502) do
     t.index ["design_id"], name: "index_accessories_on_design_id"
     t.index ["locking_system_id"], name: "index_accessories_on_locking_system_id"
     t.index ["material_id"], name: "index_accessories_on_material_id"
+    t.index ["size_id"], name: "index_accessories_on_size_id"
     t.index ["user_id"], name: "index_accessories_on_user_id"
   end
 

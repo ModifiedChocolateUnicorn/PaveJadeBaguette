@@ -64,6 +64,6 @@ class AccessoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def accessory_params
-      params.require(:accessory).permit(:design_id, :material_id, :locking_system_id, :brand_id, :accessory_size, :anodizing_id, :gemstones_ids, :user_id, :quantity)
+      params.require(:accessory).permit(:design_id, :material_id, :locking_system_id, :brand_id, :size_id, :anodizing_id, :gemstones_ids, :user_id, :quantity)
     end
 end
