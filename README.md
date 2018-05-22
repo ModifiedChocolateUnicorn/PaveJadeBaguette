@@ -29,25 +29,13 @@ As you might know, I do love everything that is body modification related (excep
 
 Comme vous le savez peut être, j'aime beaucoup tout ce qui touche à la modification corporelle (sauf l'appropriation culturelle !) et, comme vous pouvez vous en douter, les bijoux que l'on porte dans les piercings sont liés à tout ça. Possédant quelques bijoux, j'ai pensé que la réalisation d'une telle application serait intéressante.
 
-### To-Do - A faire
+### Progress - Avancement
 
 #### EN :us: :
 
-##### Design
-[ ] Pick a color palette
-[ ] Pick a font
-[ ] Think about the pages design
-
-##### Code
-[ ] To edit later
-
+I'm still working on that project, still doing the daunting task of adding content to the database (gemstones, designs (soon)). After that, I'll be working on the app itself (features, design).
 
 #### FR :fr: :
 
-##### Design
-[ ] Choisir une palette de couleurs
-[ ] Choisir une police
-[ ] Modifier la palette de couleurs - optionnel
-
-##### Code
-[ ] To edit later
+Je travaille toujours sur ce projet, la tâche la plus écrasante étant de remplir la base de donnée (ajout des pierres, designs (bientôt)).
+Une fois que cela sera fait, je pourrais m'attaquer au fonctionnement de l'application ainsi qu'à son design.
