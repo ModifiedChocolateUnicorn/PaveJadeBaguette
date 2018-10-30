@@ -14,10 +14,10 @@ Pour le moment, le projet n'est pas encore en ligne...Il faudra donc attendre en
 ### Purpose - But
 
 #### EN :
-This project uses Ruby On Rails and will either be hosted through Github Pages or Gitlab Pages :octocat:, this is basically a web application where you create an account to create your "jewelry box/chest/case". You'll be able to add the (piercing) jewelry you own to your "box/chest/case" so you'll have the possibility to check your collection of fabulous and glittering pieces, know what you own and what you don't.  
+This project uses Ruby On Rails and will probably be hosted on Heroku, this is basically a web application where you create an account to create your "jewelry box/chest/case". You'll be able to add the (piercing) jewelry you own to your "box/chest/case" so you'll have the possibility to check your collection of fabulous and glittering pieces, know what you own and what you don't.  
 
 #### FR :
-Ce projet utilise Ruby On Rails et sera hébergé sur Github pages ou Gitlab Pages :octocat:, il s'agit d'une application web sur laquelle il suffit de s'enregistrer via un compte pour avoir la possibilité de créer votre"coffret/écrin" à bijoux. Il sera possible d'ajouter à votre coffret/écrin les bijoux (piercings) que vous possédez et vous pourrez ainsi vérifier ce que vous possédez ou non et ainsi prévoir les achats de futurs bijoux fabuleux et brillants (et de qualité).
+Ce projet utilise Ruby On Rails et sera probablement hébergé sur Heroku, il s'agit d'une application web sur laquelle il suffit de s'enregistrer via un compte pour avoir la possibilité de créer votre"coffret/écrin" à bijoux. Il sera possible d'ajouter à votre coffret/écrin les bijoux (piercings) que vous possédez et vous pourrez ainsi vérifier ce que vous possédez ou non et ainsi prévoir les achats de futurs bijoux fabuleux et brillants (et de qualité).
 
 ### About - A propos
 
