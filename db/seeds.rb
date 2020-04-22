@@ -30,3 +30,8 @@ locking_systems = LockingSystem.create ([{name: "Threaded"}, {name: "Threadless"
 
 # creating the sizes
 sizes = Size.create([{thickness: 18}, {thickness: 16}, {thickness: 14}, {thickness: 12}, {thickness: 10}, {thickness: 8}, {thickness: 6}, {thickness: 4}, {thickness: 2}, {thickness: 0}, {thickness: 00}])
+
+
+# creating the designs 
+
+# designs = Design.create([{ name: nil, brand_id: nil, core_number: nil, accent_number:}])
